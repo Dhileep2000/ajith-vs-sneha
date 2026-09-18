@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-script: 'Alex Brush', 'Pinyon Script', 'Great Vibes', cursive;
+  --font-display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --color-burgundy-950: #230509;
+  --color-burgundy-900: #3b0a12;
+  --color-burgundy-850: #460c15;
+  --color-burgundy-800: #530f1a;
+  --color-burgundy-700: #681622;
+  --color-burgundy-600: #7c1c2b;
+  
+  --color-cream-50: #fdfbf7;
+  --color-cream-100: #f6f3eb;
+  --color-cream-200: #efe8dc;
+  --color-cream-300: #e2d7c5;
+  
+  --color-gold-300: #f0deaa;
+  --color-gold-400: #e2c988;
+  --color-gold-500: #c5a059;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121010;
+  color: #2b1113;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Calligraphy & Editorial Typography */
+.font-script {
+  font-family: 'Alex Brush', 'Pinyon Script', 'Great Vibes', cursive;
+}
+
+.font-editorial-title {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: 0.15em;
+}
+
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-caps-clean {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Luxury Paper / Canvas subtle texture */
+.paper-texture {
+  background-color: #F6F3EB;
+  background-image: radial-gradient(#d6ccb8 0.75px, transparent 0.75px), radial-gradient(#d6ccb8 0.75px, #F6F3EB 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.paper-texture-burgundy {
+  background-color: #4A0E17;
+  background-image: radial-gradient(#5a1622 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A0E17;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #681622;
+}
+
+/* Shimmer animations for swatches & gold details */
+@keyframes goldShimmer {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(200%) rotate(25deg); }
+}
+
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 65%
+  );
+  transform: translateX(-100%) rotate(25deg);
+  animation: goldShimmer 4s infinite ease-in-out;
+  pointer-events: none;
+}
