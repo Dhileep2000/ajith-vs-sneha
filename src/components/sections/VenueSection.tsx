@@ -43,29 +43,6 @@ export const VenueSection: React.FC<VenueSectionProps> = ({ onOpenMap }) => {
           Reception &amp; Wedding Feast • From 9:00 AM Onwards
         </span>
 
-        {/* Temple Ceremony Callout */}
-        <div className="mt-5 p-4 rounded-sm bg-[#4A0E17]/5 border border-[#4A0E17]/20 text-center">
-          <span className="font-serif text-lg sm:text-xl text-[#4A0E17] font-semibold block">
-            Arulmigu Sri Baladhandayuthapani Swamy Temple
-          </span>
-          <span className="font-sans text-[11px] sm:text-xs text-[#2B1113]/80 tracking-wide uppercase mt-0.5 block">
-            Auspicious Muhurtham Ceremony • 6:45 AM – 7:45 AM
-          </span>
-        </div>
-      </motion.div>
-
-      {/* 3. Contact Phone in Natural English */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.85 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="max-w-md sm:max-w-lg mb-8 text-[#4A0E17]/90 text-xs sm:text-sm font-sans"
-      >
-        <span>Assistance &amp; Inquiries: </span>
-        <a href="tel:6382979174" className="font-semibold hover:underline">
-          6382979174
-        </a>
       </motion.div>
 
       {/* 4. Action Buttons */}

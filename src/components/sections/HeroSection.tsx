@@ -38,7 +38,7 @@ export const HeroSection: React.FC = () => {
         className="relative w-full max-w-[320px] sm:max-w-[380px] md:max-w-[420px] aspect-square rounded-sm overflow-hidden shadow-2xl mb-8 group"
       >
         <img
-          src="/images/couple.jpg"
+          src="/images/couple.png"
           alt="Ajithkumar and Sneha Wedding Celebration"
           className="w-full h-full object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-105"
         />
