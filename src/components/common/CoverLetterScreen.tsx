@@ -33,19 +33,22 @@ export const CoverLetterScreen: React.FC<CoverLetterScreenProps> = ({ onOpenComp
             : { opacity: 1 }
         }
         exit={{ opacity: 0, transition: { duration: 0.4 } }}
-        className="fixed inset-0 z-[999999] w-screen h-screen overflow-hidden flex items-center justify-center select-none cursor-pointer"
+        className="fixed inset-0 z-[999999] w-screen h-screen overflow-hidden flex items-center justify-center select-none cursor-pointer bg-[#5B0822]"
         style={{
-          background:
-            'radial-gradient(ellipse at center, #E6E1D1 0%, #D4CFBD 50%, #C2BCAB 100%)',
+          backgroundColor: '#5B0822',
+          backgroundImage: 'url(/images/cover-pocket.jpg)',
+          backgroundPosition: 'center center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
         }}
         onClick={handleOpen}
       >
-        {/* Responsive Full-Screen Envelope Container */}
+        {/* Responsive Full-Width Container */}
         <div
-          className="relative w-full h-full flex items-center justify-center p-0 sm:p-4 overflow-hidden"
+          className="relative w-full h-full flex items-center justify-center p-4 sm:p-6 md:p-8 overflow-hidden"
           style={{ perspective: '1400px' }}
         >
-          {/* Proportional Aspect-Locked Envelope Frame (576 x 1024) */}
+          {/* Centered Small Cover Letter Frame (576 x 1024) */}
           <motion.div
             animate={
               isOpening
@@ -55,13 +58,13 @@ export const CoverLetterScreen: React.FC<CoverLetterScreenProps> = ({ onOpenComp
                   }
                 : { y: 0 }
             }
-            className="relative h-full max-h-screen aspect-[576/1024] w-auto max-w-full flex items-center justify-center overflow-hidden shadow-2xl"
+            className="relative w-auto h-[70vh] sm:h-[76vh] md:h-[80vh] max-h-[640px] max-w-[85vw] sm:max-w-[380px] md:max-w-[420px] aspect-[576/1024] flex items-center justify-center overflow-hidden rounded-lg shadow-[0_25px_50px_-12px_rgba(0,0,0,0.7)] cursor-pointer"
           >
             {/* 1. Base Cover Letter Image */}
             <img
               src="/images/cover-letter.jpg"
               alt="Wedding Invitation Cover Letter"
-              className="w-full h-full object-cover sm:object-contain pointer-events-none select-none"
+              className="w-full h-full object-cover pointer-events-none select-none"
             />
 
             {/* 2. Physical Flap 3D Opening Animation (folds upward when opened) */}
