@@ -51,7 +51,7 @@ export const HeroSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="flex items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 flex-wrap"
+        className="flex items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8 flex-wrap"
       >
         <span className="font-script text-4xl sm:text-5xl md:text-6xl text-[#3A0A10] tracking-wide">
           Ajithkumar
@@ -65,6 +65,21 @@ export const HeroSection: React.FC = () => {
         <span className="font-script text-4xl sm:text-5xl md:text-6xl text-[#3A0A10] tracking-wide">
           Sneha
         </span>
+      </motion.div>
+
+      {/* Radha & Krishna Design */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.9, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+        className="w-full max-w-[200px] sm:max-w-[240px] md:max-w-[280px] mb-8 sm:mb-10 flex items-center justify-center pointer-events-none select-none"
+      >
+        <img
+          src="/images/krishna.png"
+          alt="Radha and Krishna Divine Illustration"
+          className="w-full h-auto object-contain filter drop-shadow-sm"
+        />
       </motion.div>
 
       {/* 4. Editorial Love Quote in Natural English */}
