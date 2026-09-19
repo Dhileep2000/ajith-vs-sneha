@@ -4,7 +4,6 @@ import { FloatingPetalsCanvas } from './components/3d/FloatingPetalsCanvas';
 import { CustomCursor } from './components/common/CustomCursor';
 import { AudioPlayer } from './components/common/AudioPlayer';
 import { Preloader } from './components/common/Preloader';
-import { CoverLetterScreen } from './components/common/CoverLetterScreen';
 import { Navigation } from './components/common/Navigation';
 
 // Sections
@@ -26,18 +25,13 @@ import { MapModal } from './components/modals/MapModal';
 export const App: React.FC = () => {
   useLenis();
 
-  // Entrance flow: 'cover' -> 'loading' -> 'main'
-  const [flowStep, setFlowStep] = useState<'cover' | 'loading' | 'main'>('cover');
+  // Entrance flow: 'loading' -> 'main'
+  const [flowStep, setFlowStep] = useState<'loading' | 'main'>('loading');
   const [isRsvpOpen, setIsRsvpOpen] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
 
   return (
     <div className="w-full min-h-screen bg-[#F6F3EB] text-[#2B1113] relative overflow-x-hidden selection:bg-[#5A121D] selection:text-[#F6F3EB]">
-      {/* 0. Full-Screen Entrance Cover Letter with OPEN Animation */}
-      {flowStep === 'cover' && (
-        <CoverLetterScreen onOpenComplete={() => setFlowStep('loading')} />
-      )}
-
       {/* 1. Haute-Couture Monogram Preloader */}
       {flowStep === 'loading' && (
         <Preloader onComplete={() => setFlowStep('main')} />
