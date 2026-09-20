@@ -48,13 +48,29 @@ export const BrideGroomSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-        className="max-w-xl sm:max-w-2xl px-4 mt-8 sm:mt-10 mb-12 sm:mb-16"
+        className="max-w-xl sm:max-w-2xl px-4 mt-8 sm:mt-10 mb-12 sm:mb-16 space-y-4 text-center leading-relaxed tracking-wide"
       >
-        <p className="font-sans text-sm sm:text-base md:text-lg text-[#523E33] leading-relaxed font-normal tracking-wide text-center">
-          Priya and Rahul met over a shared plate of street-side pani puri in Mumbai and have been
-          arguing about the right amount of chilli ever since. Seven years, three cities and one
-          very patient family later, they are getting married — and they would love to have you in
-          the room when it happens.
+        <p className="font-serif italic text-base sm:text-lg text-[#8C6D53]">
+          Some meetings are planned by families,<br />
+          but some moments feel like they were meant to happen.
+        </p>
+
+        <p className="font-sans text-sm sm:text-base text-[#523E33]/90">
+          In the heart of Perambalur, two families came together for a simple first meeting. He arrived to meet her at her home, expecting nothing more than a formal introduction.
+        </p>
+
+        <p className="font-sans text-sm sm:text-base text-[#523E33]/90">
+          But somewhere between the first smile, a few quiet conversations, and those little moments that needed no words, something felt different.
+        </p>
+
+        <p className="font-sans text-sm sm:text-base text-[#523E33]/90">
+          It wasn’t a dramatic love-at-first-sight story.<br />
+          It was simply a beautiful beginning —<br />
+          two strangers meeting for the first time, and leaving with the feeling that they might have just met someone special.
+        </p>
+
+        <p className="font-serif italic text-base sm:text-lg md:text-xl text-[#4A0E17] font-medium pt-1">
+          And that little meeting became the first page of their forever.
         </p>
       </motion.div>
 
