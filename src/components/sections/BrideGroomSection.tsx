@@ -9,17 +9,17 @@ export const BrideGroomSection: React.FC = () => {
     {
       id: 'left',
       src: '/images/story-left.jpg',
-      alt: 'Couple laughing outdoors in traditional attire',
+      alt: 'Ajith and Sneha mirror selfie',
     },
     {
       id: 'center',
       src: '/images/story-center.jpg',
-      alt: 'Bride and Groom in celebratory wedding elegance with marigolds',
+      alt: 'Ajith and Sneha outdoors',
     },
     {
       id: 'right',
       src: '/images/story-right.jpg',
-      alt: 'Couple walking hand-in-hand at sunset by the coast',
+      alt: 'Ajith and Sneha together',
     },
   ];
 

@@ -15,7 +15,6 @@ import { CalendarSection } from './components/sections/CalendarSection';
 import { TimingSection } from './components/sections/TimingSection';
 import { VenueSection } from './components/sections/VenueSection';
 import { BrideGroomSection } from './components/sections/BrideGroomSection';
-import { MeetJunctionSection } from './components/sections/MeetJunctionSection';
 import { RsvpSection } from './components/sections/RsvpSection';
 import { ContactsSection } from './components/sections/ContactsSection';
 import { FooterSection } from './components/sections/FooterSection';
@@ -96,11 +95,6 @@ export const App: React.FC = () => {
         <section id="story" className="w-full">
           <BrideGroomSection />
         </section>
-
-        {/* Junction below Meet Bride & Groom Section */}
-        <div className="w-full">
-          <MeetJunctionSection />
-        </div>
 
         {/* RSVP Invitation Section (Burgundy) */}
         <section id="rsvp" className="w-full">
